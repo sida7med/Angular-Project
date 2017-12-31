@@ -1,0 +1,37 @@
+<div class="weatherInfo">
+  <div class="container">
+    <div class="up">
+      <div class="left">
+        <div class="date">Friday, Sept 08th</div>
+        <div class="place">{{formatted_address}}</div>
+      </div>
+      <div class="center">
+        <div class="temp">{{weather.temp}}</div>
+        <span>low:{{weather.high}} </span><span> high:{{weather.high}}</span>
+        <div class="climate">{{weather.feel}}</div>
+      </div>
+      <div class="right">
+        <div>updated : 07/12/2017</div>
+        </div>
+    </div>
+    <div class="down">
+      <div class="desc">
+        <div class="img"><img src="assets/img/feel.png"></div>
+        <div>Real feel</div>
+        <div>{{weather.realFeel}}°</div>
+      </div>
+      <div class="desc">
+      <div class="img"><img src="assets/img/rain.png"></div>
+      <div>Chances of rain</div>
+      <div>{{weather.chanceRain}}</div>
+      </div>
+      <div class="desc">
+      <div class="img"><img src="assets/img/wind2.png"></div>
+      <div>Wind speed</div>
+      <div>{{weather.windSpeed}}</div>
+    </div>
+    <div class="weather-bottom"><img src="assets/img/weather-bottom.png" ></div>
+  </div>
+
+  </div>
+</div>
