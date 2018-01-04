@@ -1,0 +1,83 @@
+<div class="middle">
+  <div class="gallery1" *ngIf="weather">
+  <div class="ui-block-title">
+      <h6 class="title">Widget Preview</h6>
+    </div>
+    <div class="sideWeather">
+      <div class="temperature-sensor">
+        <div class="temperature-degre">
+          <span>{{weather.temp}}</span>
+        </div>
+        <div class="max-min">
+          <span>{{weather.low}}°</span>
+          <span>{{weather.high}}°</span>
+        </div>
+      </div>
+      <div class="bigIcon">
+        <img src="assets/img/cloudy.png" width="80" height="80">
+      </div>
+      <div class="wethear-description">
+        <div class="climate">{{weather.feel}}</div>
+        <span>Real Feel: <span>{{weather.realFeel}}°</span></span>
+        <span>Chance of Rain: <span>{{weather.chanceRain}}</span></span>
+      </div>
+      <div class="weekly">
+        <ul class="weekly-forecast">
+          <li>
+            <div class="day">sun</div>
+            <img src="assets/img/chams.png" width="22" height="22">
+            <div class="temperature-sensor-day">60°</div>
+          </li>
+
+          <li>
+            <div class="day">mon</div>
+            <img src="assets/img/cloudy-min.png" width="22" height="22">
+            <div class="temperature-sensor-day">58°</div>
+          </li>
+
+          <li>
+            <div class="day">tue</div>
+            <img src="assets/img/msa7ba.png" width="22" height="22">
+            <div class="temperature-sensor-day">67°</div>
+          </li>
+
+          <li>
+            <div class="day">wed</div>
+            <img src="assets/img/mtar.png" width="22" height="22">
+            <div class="temperature-sensor-day">70°</div>
+          </li>
+
+          <li>
+            <div class="day">thu</div>
+            <img src="assets/img/r3ad.png" width="22" height="22">
+            <div class="temperature-sensor-day">58°</div>
+          </li>
+
+          <li>
+            <div class="day">fri</div>
+            <img src="assets/img/snow.png" width="22" height="22">
+            <div class="temperature-sensor-day">68°</div>
+          </li>
+
+          <li>
+            <div class="day">sat</div>
+            <img src="assets/img/wind.png" width="22" height="22">
+            <div class="temperature-sensor-day">65°</div>
+          </li>
+        </ul>
+      </div>
+      <div class="date-et-place">
+        <h5 class="date">Friday, Sept 08th</h5>
+        <div class="place">{{weather.location}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="gallery2">
+    <div class="warnning" *ngFor="let article of articles | async">
+            <img src={{article.photo}} width="300px" height="300px" alt="news">
+           <a class="mid" routerLink="/info/{{article.id}}">
+              {{article.title}}
+            </a>
+        </div>
+  </div>
+</div>

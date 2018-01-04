@@ -1,0 +1,29 @@
+<div>
+<div id="nav">
+<h5 class="title"> News</h5>
+
+<div class="recherche"></div>
+
+<h4> Have a safe worry-free drive! </h4>
+
+</div>
+
+<div id="right">
+
+</div>
+</div>
+<app-weather></app-weather>
+<div class="gallery2" *ngIf="article">
+  <div class="article-body">
+    <img src={{article.photo}} alt="" width="650" height="500">
+    <div class="article-info">
+      <h2 id="i1"><span>#{{article.id}}</span> {{ article.title | uppercase }} Details</h2>
+      <span id="i2">{{article.location}}</span>
+      <br><br>
+      <p id="i3">{{article.details}}</p>
+      <hr>
+      <div id="i4">{{article.category}}</div>
+      <a id="i5" routerLink="/news"> <img src="assets/return.png" alt=""> </a>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,5 @@
 <div>
 <div id="nav">
-<div class="orange">
-  <div class="logo"><img [src]="gif"></div>
-</div>
 <h5 class="title"> News</h5>
 
 <input type="text" name="search" placeholder="Search Here !" class="recherche" #searchBox (keyup)="search(searchBox.value)"/>
@@ -13,9 +10,7 @@
 
 <div id="right">
 
-<div class="purple">
-
-</div>
-
 </div>
 </div>
+<app-weather></app-weather>
+<app-gallery [articles] = "filteredArticles$"></app-gallery>

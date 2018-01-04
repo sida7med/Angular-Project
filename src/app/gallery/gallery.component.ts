@@ -1,14 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WeatherService } from '../weather.service';
+import { Observable } from 'rxjs/Observable';
 import { Weather } from '../weather';
 
 @Component({
-  selector: 'app-weather',
-  templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.scss']
+  selector: 'app-gallery',
+  templateUrl: './gallery.component.html',
+  styleUrls: ['./gallery.component.scss']
 })
-export class WeatherComponent implements OnInit {
+export class GalleryComponent implements OnInit {
   @Input() weather: Weather;
+  @Input() articles: any[];
   constructor( private weatherService: WeatherService ) {}
 
   ngOnInit() {
@@ -19,5 +21,4 @@ export class WeatherComponent implements OnInit {
     this.weatherService.getWeathers()
         .subscribe(weathers => this.weather = weathers[0]);
   }
-
 }
